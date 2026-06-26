@@ -44,6 +44,5 @@ public class OrderService {
         shoppingCartService.clearCart(userId);
 
         return savedOrder;
-
     }
 }
