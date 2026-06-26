@@ -11,8 +11,8 @@ import org.yearup.service.UserService;
 import java.security.Principal;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/profile")
+@CrossOrigin
 @AllArgsConstructor
 @PreAuthorize("isAuthenticated()")
 public class ProfilesController {

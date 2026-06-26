@@ -5,10 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.yearup.exceptions.CartItemNotFoundException;
-import org.yearup.exceptions.CategoryNotFoundException;
-import org.yearup.exceptions.InvalidCategoryException;
-import org.yearup.exceptions.ProfileNotFoundExcpetion;
+import org.yearup.exceptions.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,5 +45,10 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ProfileNotFoundExcpetion.class)
     public ResponseEntity<String> handleProfileNotFound(ProfileNotFoundExcpetion excpetion) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(excpetion.getMessage());
+    }
+
+    @ExceptionHandler(EmptyCartException.class)
+    public ResponseEntity<String> handleEmptyCart(EmptyCartException exception) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
     }
 }
