@@ -1,0 +1,61 @@
+<div class="modal-header border-0 pb-0">
+    <h3 class="fw-bold">Create Your Account</h3>
+
+    <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            onclick="hideModalForm()">
+    </button>
+</div>
+
+<div class="modal-body pt-2">
+
+    <p class="text-muted mb-4">
+        Join EasyShop and start shopping in seconds.
+    </p>
+
+    <div class="form-floating mb-3">
+        <input
+                type="text"
+                class="form-control"
+                id="registerUsername"
+                placeholder="Username">
+        <label for="registerUsername">Username</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input
+                type="password"
+                class="form-control"
+                id="registerPassword"
+                placeholder="Password">
+        <label for="registerPassword">Password</label>
+    </div>
+
+    <div class="form-floating mb-4">
+        <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                placeholder="Confirm Password">
+        <label for="confirmPassword">Confirm Password</label>
+    </div>
+
+</div>
+
+<div class="modal-footer border-0 pt-0">
+
+    <button
+            class="btn btn-light px-4"
+            onclick="hideModalForm()">
+        Cancel
+    </button>
+
+    <button
+            class="btn btn-primary px-4"
+            onclick="register()">
+        Create Account
+    </button>
+
+</div>
