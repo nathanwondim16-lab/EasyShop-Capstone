@@ -2,6 +2,7 @@ package org.yearup.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+
 public class ShoppingCartItem
 {
     private Product product = null;
