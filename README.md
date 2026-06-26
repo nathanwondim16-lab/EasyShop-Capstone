@@ -99,19 +99,19 @@ The frontend was redesigned to provide a cleaner and more modern shopping experi
 # 📸 Screenshots
 
 ## Home Page
-![Home Page](../images/HomePage.png)
+![Home Page](images/HomePage.png)
 
 ## Registration
-![Registration Page](../images/Registration.png)
+![Registration Page](images/Registration.png)
 
 ## Login
-![Login Page](../images/login.png)
+![Login Page](images/login.png)
 
 ## Shopping Cart
-![Shopping Cart Page](../images/Cart.png)
+![Shopping Cart Page](images/Cart.png)
 
 ## Profile Page
-![Profile Page](../images/Profile.png)
+![Profile Page](images/Profile.png)
 
 
 ---
