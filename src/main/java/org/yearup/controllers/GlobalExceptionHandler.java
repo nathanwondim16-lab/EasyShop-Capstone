@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.yearup.exceptions.CartItemNotFoundException;
 import org.yearup.exceptions.CategoryNotFoundException;
 import org.yearup.exceptions.InvalidCategoryException;
+import org.yearup.exceptions.ProfileNotFoundExcpetion;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,5 +43,10 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(CartItemNotFoundException.class)
     public ResponseEntity<String> handleCartItemNotFound(CartItemNotFoundException exception) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(exception.getMessage());
+    }
+
+    @ExceptionHandler(ProfileNotFoundExcpetion.class)
+    public ResponseEntity<String> handleProfileNotFound(ProfileNotFoundExcpetion excpetion) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(excpetion.getMessage());
     }
 }
