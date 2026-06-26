@@ -45,9 +45,7 @@ public class UserService
 
     public User create(User user)
     {
-        if(!user.getRole().startsWith("ROLE_")) {
-            user.setRole("ROLE_" + user.getRole());
-        }
+        user.setRole(user.getRole());
         
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         user.setPassword(passwordEncoder.encode(user.getPassword()));

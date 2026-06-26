@@ -84,7 +84,13 @@ public class User {
    }
 
    public void setRole(String role) {
-      this.role = role;
+      if(role == null || role.isBlank()) {
+         this.role = "ROLE_USER";
+      } else if (role.startsWith("ROLE_")) {
+         this.role = role;
+      } else {
+         this.role = "ROLE_" + role;
+      }
    }
 
    public boolean isActivated() {
